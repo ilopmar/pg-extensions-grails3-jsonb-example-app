@@ -4,6 +4,7 @@ buildscript {
     }
     repositories {
         mavenLocal()
+        jcenter()
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
@@ -57,6 +58,12 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.grails:grails-dependencies"
     compile "org.grails:grails-web-boot"
+
+
+    compile 'org.grails.plugins:hibernate:4.3.10.4'
+    compile 'org.grails.plugins:postgresql-extensions:4.6.1'
+    provided 'org.postgresql:postgresql:9.4-1203-jdbc4'
+
 
     compile "org.grails.plugins:hibernate"
     compile "org.grails.plugins:cache"
